@@ -7,6 +7,7 @@ public class Program
     public static void Main(string[]  args)
     {
         Intro();
+        PlayGame();
         
 
     }
@@ -31,12 +32,14 @@ public class Program
         return rollNumber;
     }
 
-    public static void RoundOne()
+    public static void PlayGame()
     {
         int playerScore = 0;
         int rivalScore = 0;
+        int roundNumber = 0;
+        roundNumber++;
 
-        Console.WriteLine("Round 1");
+        Console.WriteLine($"Round {roundNumber}");
         int rivalRoll = RollDice();
         Console.WriteLine($"Rival rolled a {rivalRoll}");
         Console.WriteLine("Press any key to roll the dice...");
@@ -58,5 +61,7 @@ public class Program
         {
             Console.WriteLine("This round was a draw!");
         }
+
+        Console.WriteLine($"The score is - {playerScore} to {rivalScore}");
     }
 }
