@@ -8,8 +8,6 @@ public class Program
     {
         Intro();
         PlayGame();
-        
-
     }
 
     public static void Intro()
